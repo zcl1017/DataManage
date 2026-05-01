@@ -35,10 +35,10 @@ module.exports = (app) => {
             if (i === len - 1) {
                 tempMiddleware[i] = require(path.resolve(file))(app);
             } else {
-                if (!tempMiddleware[name[i]]) {
+                if (!tempMiddleware[names[i]]) {
                     tempMiddleware[i] = {};
                 }
-                tempMiddleware = tempMiddleware[name[i]];
+                tempMiddleware = tempMiddleware[names[i]];
             }
         }
     });

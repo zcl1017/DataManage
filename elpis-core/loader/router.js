@@ -10,13 +10,14 @@ const { sep } = path;
 */
 module.exports = (app) => {
     // 获取路由文件地址
-    const routerPath = path.resolve(app.baseDir, `.${sep}router`)
+    const routerPath = path.resolve(app.businessPath, `.${sep}router`)
 
     // 实例化KoaRouter
     const router = new KoaRouter();
 
     // 注册所有路由
     const fileList = glob.sync(path.resolve(routerPath, `.${sep}**${sep}**.js`))
+    console.log(fileList, 'fileList')
     fileList.forEach(file => {
         // 目的
         // module.exports = (app, router) => {

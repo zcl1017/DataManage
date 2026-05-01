@@ -35,12 +35,12 @@ module.exports = (app) => {
             if (i === len - 1) { // 文件
                 // 之后每一个controller都是一个class 所以需要new
                 const ControllerModule = require(path.resolve(file))(app);
-                tempController[i] = new ControllerModule;
+                tempController[names[i]] = new ControllerModule();
             } else { // 文件夹
-                if (!tempController[name[i]]) {
-                    tempController[i] = {};
+                if (!tempController[names[i]]) {
+                    tempController[names[i]] = {};
                 }
-                tempController = tempController[name[i]];
+                tempController = tempController[names[i]];
             }
         }
     });

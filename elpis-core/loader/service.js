@@ -37,10 +37,10 @@ module.exports = (app) => {
                 const ServiceModule = require(path.resolve(file))(app);
                 tempService[i] = new ServiceModule;
             } else { // 文件夹
-                if (!tempService[name[i]]) {
+                if (!tempService[names[i]]) {
                     tempService[i] = {};
                 }
-                tempService = tempService[name[i]];
+                tempService = tempService[names[i]];
             }
         }
     });
