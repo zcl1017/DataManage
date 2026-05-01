@@ -21,7 +21,7 @@ module.exports = (app) => {
     // 获取default.config
     let defaultConfig = {};
     try {
-        defaultConfig = require(path.resolve(app.baseDir, `.${sep}config.default.js`))
+        defaultConfig = require(path.resolve(configPath, `.${sep}config.default.js`))
     } catch (error) {
         console.log('[exception] there is no default.config.js file')
     }
@@ -33,8 +33,9 @@ module.exports = (app) => {
             envConfig = require(path.resolve(configPath, `.${sep}config.local.js`));
         } else if (app.env.isBeta()) {
             envConfig = require(path.resolve(configPath, `.${sep}config.beta.js`));
-        } else if (app.env.isProd()) {
+        } else if (app.env.isProduction()) {
             envConfig = require(path.resolve(configPath, `.${sep}config.prod.js`));
+            console.log('prod')
         }
     } catch (error) {
         console.log('[exception] there is no env.config.js file')

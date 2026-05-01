@@ -56,7 +56,6 @@ module.exports = {
 
         // 加载extend
         extendLoader(app);
-        console.log(app, 'extend');
         console.log(`-- [start] load extendLoader done --`);
 
 
@@ -65,7 +64,7 @@ module.exports = {
             require(`${app.businessPath}${sep}middleware.js`)(app);
             console.log(`--[start] load appMiddleware done--`)
         } catch (error) {
-            console.log('[excpetion] there is no middleware.js file')
+            console.log('[excpetion] there is no global middleware.js file')
         }
         // 注册路由
         routerLoader(app);
