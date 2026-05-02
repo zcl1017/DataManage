@@ -33,10 +33,10 @@ module.exports = (app) => {
         const names = name.split(sep);
         for (let i = 0, len = names.length; i < len; i++) {
             if (i === len - 1) {
-                tempMiddleware[i] = require(path.resolve(file))(app);
+                tempMiddleware[names[i]] = require(path.resolve(file))(app);
             } else {
                 if (!tempMiddleware[names[i]]) {
-                    tempMiddleware[i] = {};
+                    tempMiddleware[names[i]] = {};
                 }
                 tempMiddleware = tempMiddleware[names[i]];
             }

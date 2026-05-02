@@ -35,10 +35,10 @@ module.exports = (app) => {
             if (i === len - 1) { // 文件
                 // 之后每一个service都是一个class 所以需要new
                 const ServiceModule = require(path.resolve(file))(app);
-                tempService[i] = new ServiceModule;
+                tempService[names[i]] = new ServiceModule();
             } else { // 文件夹
                 if (!tempService[names[i]]) {
-                    tempService[i] = {};
+                    tempService[names[i]] = {};
                 }
                 tempService = tempService[names[i]];
             }

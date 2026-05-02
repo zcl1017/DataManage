@@ -1,43 +1,29 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <title>首页</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: "Microsoft YaHei", sans-serif;
-            background-color: #f5f5f5;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            flex-direction: column;
-        }
-        .container {
-            text-align: center;
-            padding: 40px;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h1 {
-            font-size: 36px;
-            color: #333;
-            margin-bottom: 20px;
-        }
-        p {
-            font-size: 18px;
-            color: #666;
-        }
-    </style>
+    <title>{{name}}</title>
+    <link href="/static/normalize.css" rel="stylesheet">
+    <link rel="icon" href="/static/logo.png" type="image/png">
 </head>
 <body>
-    <div class="container">
-        <h1>page1</h1>
-    </div>
+    <h1>page111</h1>
+    <input id="env"  value="{{ env }}" style="display: none">
+    <input id="options" value="{{ options }}" style="display: none">
+    <button id="btn-send" type="button">发送请求</button>
 </body>
+<script src="https://cdn.bootcss.com/axios/0.18.0/axios.min.js"></script>
+<script type="text/javascript">
+    try {
+        window.env = document.getElementById('env').value;
+        options = document.getElementById('options').value;
+        window.options = JSON.parse(options);
+
+    }catch(e){
+        console.log(e);
+    }
+    function handleClick() {
+        axios.get('/api/project/list').then(function (res) { console.log(res); });
+    }
+    document.getElementById('btn-send').addEventListener('click', handleClick);
+</script>
 </html>
