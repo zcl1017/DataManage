@@ -25,7 +25,7 @@ module.exports = (app) => {
         // 提取文件名称a
         let name = path.resolve(file);
         // 截取路径 eg:app/middlewares/custom-middleware.js=>custom-middleware-custom.js
-        name = name.substring(name.lastIndexOf(`middleware${sep}`) + `middlewares${sep}`.length, name.lastIndexOf('.'));
+        name = name.substring(name.lastIndexOf(`middleware${sep}`) + `middleware${sep}`.length, name.lastIndexOf('.'));
         // 把'-'统一改为驼峰，custom-module/custom-middleware.js => customModule.custom<iddleware
         name = name.replace(/[_-][a-z]/ig, (s) => s.substring(1).toUpperCase());
         // 挂载middleware到内容app对象中

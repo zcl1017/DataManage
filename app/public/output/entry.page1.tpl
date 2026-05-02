@@ -9,9 +9,10 @@
     <h1>page111</h1>
     <input id="env"  value="{{ env }}" style="display: none">
     <input id="options" value="{{ options }}" style="display: none">
-    <button id="btn-send" type="button">发送请求</button>
+    <button onClick="handleClick()">发送请求</button>
 </body>
 <script src="https://cdn.bootcss.com/axios/0.18.0/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-md5@0.8.3/src/md5.min.js"></script>
 <script type="text/javascript">
     try {
         window.env = document.getElementById('env').value;
@@ -22,8 +23,19 @@
         console.log(e);
     }
     function handleClick() {
-        axios.get('/api/project/list').then(function (res) { console.log(res); });
+        const signKey = 'vsivbguiagbcua';
+        const st = Date.now();
+        axios.request({
+            method: 'get',
+            url: '/api/project/list',
+            params: { proj_key: 'test' },
+            headers: {
+                s_t: st,
+                s_sign: md5(`${signKey}_${st}`)
+            }
+        })
+        
+    
     }
-    document.getElementById('btn-send').addEventListener('click', handleClick);
 </script>
 </html>

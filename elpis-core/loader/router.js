@@ -17,7 +17,6 @@ module.exports = (app) => {
 
     // 注册所有路由
     const fileList = glob.sync(path.resolve(routerPath, `.${sep}**${sep}**.js`))
-    console.log(fileList, 'fileList')
     fileList.forEach(file => {
         // 目的
         // module.exports = (app, router) => {
