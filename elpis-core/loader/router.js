@@ -28,7 +28,7 @@ module.exports = (app) => {
     // 路由兜底
     router.get('*', async (cxt, next) => {
         cxt.status = 302; // 临时重定向
-        cxt.redirect(`${app?.options?.homPage ?? '/'}`);
+        cxt.redirect(`${app?.options?.homePage ?? '/'}`);
     })
 
     // ；路由注册到app上

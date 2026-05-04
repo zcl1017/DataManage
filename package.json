@@ -8,7 +8,9 @@
     "lint": "eslint --quiet --ext js,vue",
     "dev": "set _ENV='local' && nodemon ./index.js",
     "beta": "set _ENV='beta' && nodemon ./index.js",
-    "prod": "set _ENV=production && nodemon index.js"
+    "prod": "set _ENV=production && nodemon index.js",
+    "build:prod": "node ./app/webpack/prod.js",
+    "build:dev": "node --max-old-space-size=4096 ./app/webpack/dev.js"
   },
   "repository": {
     "type": "git",
@@ -84,7 +86,7 @@
     "vue-loader": "^17.2.2",
     "vue-style-loader": "^4.1.2",
     "webpack": "^5.88.1",
-    "webpack-dev-middleware": "^6.1.1",
+    "webpack-dev-middleware": "^6.1.3",
     "webpack-hot-middleware": "^2.25.4",
     "webpack-merge": "^4.2.1"
   },
