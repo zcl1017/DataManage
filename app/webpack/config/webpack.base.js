@@ -81,7 +81,7 @@ module.exports = {
             $pages: path.resolve(process.cwd(), './app/pages'),
             $common: path.resolve(process.cwd(), './app/pages/common'),
             $widgets: path.resolve(process.cwd(), './app/widgets'),
-            $store: path.resolve(process.cwd(), './app/store'),
+            $store: path.resolve(process.cwd(), './app/pages/store'),
 
         }
     },
@@ -93,7 +93,9 @@ module.exports = {
         new VueLoaderPlugin(),
         // 将第三方库暴露在window context下
         new webpack.ProvidePlugin({
-            Vue: 'vue'
+            Vue: 'vue',
+            axios: 'axios',
+            _: 'loadsh'
         }),
         // 定义全局变量
         new webpack.DefinePlugin({
