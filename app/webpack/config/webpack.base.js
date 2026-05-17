@@ -49,11 +49,11 @@ module.exports = {
                 loader: 'babel-loader'
             }
         }, {
-            test: /\.(png|jpe?g|gif)(\?.+)$/,
+            test: /\.(png|jpe?g|gif)(\?.*)?$/,
             use: {
                 loader: 'url-loader',
-                options: {       // ✅ 正确：放进 use 内部
-                    limit: 300,
+                options: {
+                    limit: 8 * 1024,
                     esModule: false
                 }
             }
@@ -80,7 +80,7 @@ module.exports = {
         alias: {
             $pages: path.resolve(process.cwd(), './app/pages'),
             $common: path.resolve(process.cwd(), './app/pages/common'),
-            $widgets: path.resolve(process.cwd(), './app/widgets'),
+            $widgets: path.resolve(process.cwd(), './app/pages/widgets'),
             $store: path.resolve(process.cwd(), './app/pages/store'),
 
         }

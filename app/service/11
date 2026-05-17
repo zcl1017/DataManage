@@ -1,0 +1,139 @@
+[
+    {
+        "model": {
+            "model": "dashboard",
+            "name": "电商系统",
+            "menu": [
+                {
+                    "key": "product",
+                    "name": "商品管理",
+                    "menuType": "module",
+                    "moduleType": "custom",
+                    "customConfig": {
+                        "path": "/todo"
+                    }
+                },
+                {
+                    "key": "order",
+                    "name": "订单管理",
+                    "menuType": "module",
+                    "moduleType": "custom",
+                    "customConfig": {
+                        "path": "/todo"
+                    }
+                },
+                {
+                    "key": "client",
+                    "name": "客户管理",
+                    "menuType": "module",
+                    "moduleType": "custom",
+                    "customConfig": {
+                        "path": "/todo"
+                    }
+                }
+            ],
+            "key": "business"
+        },
+        "project": {
+            "pdd": {
+                "model": "dashboard",
+                "name": "淘宝",
+                "menu": [
+                    {
+                        "key": "product",
+                        "name": "商品管理(拼多多)",
+                        "menuType": "module",
+                        "moduleType": "custom",
+                        "customConfig": {
+                            "path": "/todo"
+                        }
+                    },
+                    {
+                        "key": "order",
+                        "name": "订单管理",
+                        "menuType": "module",
+                        "moduleType": "custom",
+                        "customConfig": {
+                            "path": "/todo"
+                        }
+                    },
+                    {
+                        "key": "client",
+                        "name": "客户管理(拼多多)",
+                        "menuType": "module",
+                        "moduleType": "custom",
+                        "customConfig": {
+                            "path": "/todo"
+                        }
+                    },
+                    {
+                        "key": "data",
+                        "name": "数据分析",
+                        "menuType": "module",
+                        "moduleType": "sider",
+                        "siderConfig": {
+                            "menu": [
+                                {
+                                    "key": "analysis",
+                                    "name": "电商罗盘",
+                                    "menuType": "module",
+                                    "moduleType": "custom",
+                                    "customConfig": {
+                                        "path": "/todo"
+                                    }
+                                },
+                                {
+                                    "key": "analysis",
+                                    "name": "电商罗盘",
+                                    "moduleType": "iframe",
+                                    "customConfig": {
+                                        "path": "/todo"
+                                    }
+                                },
+                                {
+                                    "key": "analysis",
+                                    "name": "电商罗盘",
+                                    "moduleType": "custom",
+                                    "customConfig": {
+                                        "path": "/todo"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "key": "pdd",
+                "desc": "淘宝电商系统",
+                "homePage": ""
+            },
+            "taobao": {
+                "model": "dashboard",
+                "name": "淘宝",
+                "menu": [
+                    {
+                        "key": "product",
+                        "name": "商品管理",
+                        "menuType": "module",
+                        "moduleType": "custom",
+                        "customConfig": {
+                            "path": "/todo"
+                        }
+                    },
+                    {
+                        "key": "order",
+                        "name": "订单管理",
+                        "menuType": "module",
+                        "moduleType": "iframe",
+                        "customConfig": {
+                            "path": "/todo"
+                        },
+                        "iframeConfig": {
+                            "path": "heep://www/baidu.com"
+                        }
+                    },
+                    {
+                        "key": "client",
+                        "name":" 
+客户管理","menuType":"module","moduleType":"custom","customConfig":{"path":"/todo"}},{"key":"operating","name":"运营活动","menuType":"module","moduleType":"sider","siderConfig":{"menu":[{"key":"coupon","name":"优
+惠券","menuType":"module","customConfig":{"path":"/todo"}},{"key":"limited","name":"限量购","menuType":"module","customConfig":{"path":"/todo"}},{"key":"festival","name":"节日活动","menuType":"module","customConfig":{"path":"/todo"}}]}}],"key":"taobao","desc":"淘宝电商系统","homePage":""}}},{"model":{"model":"dashboard","name":"课程系统","menu":[{"key":"video","name":"视频管理","menuType":"module","moduleType":"custom","customConfig":{"path":"/todo"}},{"key":"user","name":"用户管理","menuType":"module","moduleType":"custom","customConfig":{"path":"/todo"}}],"key":"course"},"project":{"billbill":{"model":"dashboard","name":"b站课
+堂","menu":[{"key":"video","name":"视频管理（B站）","menuType":"module","moduleType":"custom","customConfig":{"path":"/todo"}},{"key":"user","name":"用户管理","menuType":"module","moduleType":"custom","customConfig":{"path":"/todo"}},{"name":"课程资料","menuType":"module","moduleType":"sider","siderConfig":{"menu":[{"key":"pdf","name":"PDF","menuType":"module","moduleType":"custom","customConfig":{"path":"/todo"}},{"key":"excel","name":"excel","menuType":"module","moduleType":"custom","customConfig":{"path":"/todo"}},{"key":"ppt","name":"PPT","menuType":"module","moduleType":"custom","customConfig":{"path":"/todo"}}]}}],"key":"billbill","desc":"b站课程管理系统","homePage":""},"douyin":{"model":"dashboard","name":"抖音课堂","menu":[{"key":"video","name":"视频管理","menuType":"module","moduleType":"custom","customConfig":{"path":"/todo"}},{"key":"user","name":"用户管理","menuType":"module","moduleType":"custom","customConfig":{"path":"/todo"}},{"key":"traffic","name":"流量管理","menuType":"module","moduleType":"sider","siderConfig":{"menu":[{"key":"user-traffic","name":"学员流量","menuType":"module","moduleType":"custom","customConfig":{"path":"/todo"}}]}}],"key":"douyin","desc":"抖音课程管理系统","homePage":""}}}]

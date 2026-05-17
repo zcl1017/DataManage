@@ -1,0 +1,38 @@
+[2026-05-02T13:52:00.204] [INFO] default - 123
+[2026-05-02T13:52:00.960] [INFO] default - 123
+[2026-05-02T13:52:01.442] [INFO] default - 123
+[2026-05-02T13:52:45.286] [INFO] default - 123
+[2026-05-02T13:52:46.135] [INFO] default - 123
+[2026-05-02T13:52:46.287] [INFO] default - 123
+[2026-05-02T13:52:46.498] [INFO] default - 123
+[2026-05-02T14:21:13.801] [INFO] default - {}
+[2026-05-02T14:21:13.803] [ERROR] default - [-- exception --]: TypeError: Cannot read properties of undefined (reading 'b')
+    at ProjectController.getList (D:\studyProgrammer\DataManage\app\controller\project.js:11:37)
+    at async D:\studyProgrammer\DataManage\app\middleware\error-handler.js:9:13
+    at async bodyParser (D:\studyProgrammer\DataManage\node_modules\koa-bodyparser\index.js:78:5)
+[2026-05-02T14:21:13.805] [ERROR] default - [-- exception --]: undefined Cannot read properties of undefined (reading 'b') undefined
+[2026-05-02T14:21:58.756] [INFO] default - {"cause":{},"isOperational":true}
+[2026-05-02T14:21:58.756] [ERROR] default - [-- exception --]: OperationalError: template not found: output/entry.page3.tpl
+    at createTemplate (D:\studyProgrammer\DataManage\node_modules\nunjucks\src\environment.js:234:15)
+    ... 14 lines matching cause stack trace ...
+    at D:\studyProgrammer\DataManage\node_modules\babel-runtime\helpers\asyncToGenerator.js:35:14 {
+  cause: Error: template not found: output/entry.page3.tpl
+      at createTemplate (D:\studyProgrammer\DataManage\node_modules\nunjucks\src\environment.js:234:15)
+      at next (D:\studyProgrammer\DataManage\node_modules\nunjucks\src\lib.js:260:7)
+      at handle (D:\studyProgrammer\DataManage\node_modules\nunjucks\src\environment.js:267:11)
+      at D:\studyProgrammer\DataManage\node_modules\nunjucks\src\environment.js:276:9
+      at next (D:\studyProgrammer\DataManage\node_modules\nunjucks\src\lib.js:258:7)
+      at Object.asyncIter (D:\studyProgrammer\DataManage\node_modules\nunjucks\src\lib.js:263:3)
+      at Environment.getTemplate (D:\studyProgrammer\DataManage\node_modules\nunjucks\src\environment.js:259:9)
+      at Environment.render (D:\studyProgrammer\DataManage\node_modules\nunjucks\src\environment.js:295:10)
+      at Environment.tryCatcher (D:\studyProgrammer\DataManage\node_modules\bluebird\js\release\util.js:16:23)
+      at Environment.ret [as renderAsync] (eval at makeNodePromisifiedEval (D:\studyProgrammer\DataManage\node_modules\bluebird\js\release\promisify.js:184:12), <anonymous>:13:39)
+      at _callee$ (D:\studyProgrammer\DataManage\node_modules\koa-nunjucks-2\compiled.js:109:64)
+      at tryCatch (D:\studyProgrammer\DataManage\node_modules\regenerator-runtime\runtime.js:62:40)
+      at Generator.invoke [as _invoke] (D:\studyProgrammer\DataManage\node_modules\regenerator-runtime\runtime.js:296:22)
+      at prototype.<computed> [as next] (D:\studyProgrammer\DataManage\node_modules\regenerator-runtime\runtime.js:114:21)
+      at step (D:\studyProgrammer\DataManage\node_modules\babel-runtime\helpers\asyncToGenerator.js:17:30)
+      at D:\studyProgrammer\DataManage\node_modules\babel-runtime\helpers\asyncToGenerator.js:35:14,
+  isOperational: true
+}
+[2026-05-02T14:21:58.766] [ERROR] default - [-- exception --]: undefined template not found: output/entry.page3.tpl undefined

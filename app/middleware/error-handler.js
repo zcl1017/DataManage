@@ -23,7 +23,7 @@ module.exports = (app) => {
             }
             const resBody = {
                 success: false,
-                code: 50000,
+                code: 500,
                 message: '网路异常， 请稍后重试！'
             }
             ctx.status = 200;

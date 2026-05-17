@@ -4,7 +4,7 @@
   "description": "��#\u0000 \u0000D\u0000a\u0000t\u0000a\u0000M\u0000a\u0000n\u0000a\u0000g\u0000e\u0000\r\u0000 \u0000",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "set _ENV=local && mocha test/**/*.js",
     "lint": "eslint --quiet --ext js,vue",
     "dev": "set _ENV='local' && nodemon ./index.js",
     "beta": "set _ENV='beta' && nodemon ./index.js",
