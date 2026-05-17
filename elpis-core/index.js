@@ -73,12 +73,13 @@ module.exports = {
 
         try {
             // 启动服务
-            const port = process.env.PORT || 8080;
+            const port = process.env.PORT || 8081;
             const host = process.env.IP || '0.0.0.0';
             app.listen(port, host);
             console.log('77777', host, port)
         } catch (error) {
             console.error(error);
         }
+        return app;
     }
 }

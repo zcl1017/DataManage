@@ -45,5 +45,11 @@ consoler.info('请等待webpack初次构建完成提示。。。')
 // 启动服务devserver
 const port = DEV_SERVER_CONFIG.PORT;
 app.listen(port, () => {
-    console.log('app listening on port ${port}')
-})
+    console.log(`app listening on port ${port}`);
+}).on('error', (err) => {
+    if (err.code === 'EADDRINUSE') {
+        console.error(`端口 ${port} 已被占用，请先结束占用进程: netstat -ano | findstr :${port}`);
+        process.exit(1);
+    }
+    throw err;
+});
